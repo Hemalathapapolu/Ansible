@@ -1,8 +1,8 @@
-- name: Install ngnix
+- name: install and run ngnix
   host: web
   become: yes #becoming root user
   task:
-    - name: Install nginx
+    - name: install nginx
       ansible.builtin.dnf:
         name: nginx
         state: latest
