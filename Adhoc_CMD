@@ -1,0 +1,8 @@
+Installing Packages in Ansible::
+  ansible -i 172.31.17.196, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m dnf -a "name=nginx state=started" -b
+
+Starting Service:
+ ansible -i 172.31.17.196, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m service -a "name=nginx state=started" -b
+
+Ping Check:
+ansible -i 172.31.17.196, all -e ansible_user=ec2-user -e ansible_password=DevOps321 -m ping
